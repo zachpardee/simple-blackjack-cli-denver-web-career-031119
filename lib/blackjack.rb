@@ -1,33 +1,46 @@
 def welcome
-  # code #welcome here
+  puts "Welcome to the Blacjack Table"
 end
 
 def deal_card
-  # code #deal_card here
+  rand(1..11)
 end
 
-def display_card_total
-  # code #display_card_total here
+def display_card_total(number)
+  puts "Your cards add up to #{number}"
 end
 
 def prompt_user
-  # code #prompt_user here
+  put "Type 'h' to hit or 's' to stay"
 end
 
 def get_user_input
-  # code #get_user_input here
+  gets
 end
 
-def end_game
-  # code #end_game here
+def end_game(card_total)
+  puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
 def initial_round
-  # code #initial_round here
+  card1 = deal_card
+  card2 = deal_card
+  card_sum = card1 + card2
+  display_card_total(card_sum)
+  puts card_sum
+  card_sum
 end
 
 def hit?
-  # code hit? here
+  prompt_user
+  user_input = get_user_input
+  if user_input == "s"
+    break
+  end
+  elsif user_input == "h"
+    deal_card
+  else
+  
 end
 
 def invalid_command
