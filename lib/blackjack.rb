@@ -36,7 +36,6 @@ def hit?
   prompt_user
   user_input = get_user_input
   if user_input == "s"
-    break
   elsif user_input == "h"
     deal_card
   else
