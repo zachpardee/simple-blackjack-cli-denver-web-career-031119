@@ -36,10 +36,11 @@ def hit?
   user_input = get_user_input
   if user_input == "s"
     break
-  end
   elsif user_input == "h"
     deal_card
   else
+    invalid_command
+  end
   
 end
 
